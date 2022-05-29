@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    
+  <!-- header -->
+
+  <nav class="nav"> 
+        
+    <div class="logo">
+        <img class="img-logo" src="./img/curso-online.png" alt="">
+    </div>
+
+    <div class="menu">
+      <input class="light-table-filter Search"  type="text"
+ placeholder="Barra de Busqueda" data-table="order-table">
+        
+    </div>
+
+</nav>
+
+
+    <!-- formulario -->
+
+    <div class="container-fluid">
+      
+    <section class="form-register">
+
+      <form action="" method="POST" id="form">
+        <div class="form">
+            <h1>Registro</h1>
+
+            <div class="grupo">
+                
+                <input class="input" type="number" name="codigo" id="codigo" required><span class="barra"></span>
+
+                <label for="">Codigo</label>
+            </div>
+            <div class="grupo">
+              <input class="input" type="text" name="nombre" id="nombre"  required></span>
+                <label for="">Nombre</label>
+            </div>
+            <div class="grupo">
+
+              <textarea class="input" name="descripcion" id="descripcion" cols="30" rows="6"></textarea required><span class="barra"></span>
+                
+            </div>
+
+            <div class="grupo">  
+              <select id="tipo" class="input" name="select">
+                <option value="investigacion">Investigacion</option>
+                <option value="extension" selected>Extension</option>
+              </select>
+            </div>
+
+            <div class="grupo">
+              
+              <input class="input" type="date" name="fecha" id="fecha" required>
+             
+            </div>
+
+            <button type="submit"   onclick="table()" >Registrar</button>
+            <button type="submit"   onclick="editar()"> Editar</button>
+   
+        </div>
+    </form>
+       
+    
+      </section>
+
+          <!-- tabla -->
+
+<table id="table" class="rwd-table order-table">
+  <thead>
+      <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Fecha</th>
+          <th>Tipo</th>
+          <th>Action</th>
+        </tr>
+
+  </thead>
+
+  <tbody id="tbody">
+    
+
+  </tbody>
+
+</table>
+
+
+
+      
+    </div>
+
+<!-- barra de busqueda -->
+<script src="./main.js"></script>
+
+</body>
+</html>
